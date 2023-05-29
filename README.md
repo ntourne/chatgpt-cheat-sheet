@@ -1,5 +1,5 @@
 # ChatGPT Cheat Sheet
-Most of the prompts listed below were obtained from the [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) course from DeepLearning.AI and OpenAI.
+These prompts listed below were obtained from the [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) course by DeepLearning.AI and OpenAI.
 
 Summarizing
 -----------
@@ -100,7 +100,7 @@ customers and products!!
 What is the sentiment of the following product review, which 
 is delimited with triple backticks?
 
-Review text: '''{content}''
+Review text: ```{content}```
 ```
 
 ```
@@ -109,7 +109,7 @@ is delimited with triple backticks?
 
 Give your answer as a single word, either "positive" or "negative".
 
-Review text: '''{content}'''
+Review text: ```{content}```
 ```
 
 **Identify types of emotions**
@@ -120,7 +120,7 @@ following review is expressing. Include no more than
 five items in the list. Format your answer as a list of 
 lower-case words separated by commas.
 
-Review text: '''{content}'''
+Review text: ```{content}```
 ```
 
 **Identify anger**
@@ -130,7 +130,7 @@ Is the writer of the following review expressing anger?
 The review is delimited with triple backticks. 
 Give your answer as either yes or no.
 
-Review text: '''{content}'''
+Review text: ```{content}```
 ```
 
 **Extract product and company name from customer reviews**
@@ -147,7 +147,7 @@ If the information isn't present, use "unknown"
 as the value.
 Make your response as short as possible.
   
-Review text: '''{content}'''
+Review text: ```{content}```
 ```
 
 **Doing multiple tasks at once**
@@ -167,7 +167,7 @@ as the value.
 Make your response as short as possible.
 Format the Anger value as a boolean.
 
-Review text: '''{content}'''
+Review text: ```{content}```
 ```
 
 **Inferring topics**
@@ -212,7 +212,7 @@ Make each item one or two words long.
 
 Format your response as a list of items separated by commas.
 
-Text sample: '''{content}'''
+Text sample: ```{content}```
 ```
 
 **Make a news alert for certain topics**
@@ -227,5 +227,97 @@ Give your answer as list with 0 or 1 for each topic.\
 List of topics: nasa, local government, engineering, 
 employee satisfaction, federal government
 
-Text sample: '''{story}'''
+Text sample: ```{content}```
 ```
+
+Transforming
+------------
+
+How to use LLM for text transformation tasks such as language translation, spelling and grammar checking, tone adjustment, and format conversion.
+
+**Translation**
+
+ChatGPT is trained with sources in many languages. This gives the model the ability to do translation. Here are some examples of how to use this capability.
+
+```
+Translate the following English text to Spanish: 
+```Hi, I would like to order a blender``
+```
+
+```
+Tell me which language this is: 
+```Combien coûte le lampadaire?```
+```
+
+```
+Translate the following  text to French and Spanish
+and English pirate: 
+```I want to order a basketball```
+```
+
+```
+Translate the following text to Spanish in both the 
+formal and informal forms: 
+'Would you like to order a pillow?'
+```
+
+**Tone Transformation**
+
+Writing can vary based on the intended audience. ChatGPT can produce different tones.
+
+```
+Translate the following from slang to a business letter: 
+'Dude, This is Joe, check out this spec on this standing lamp.
+```
+
+**Format Conversion**
+
+ChatGPT can translate between formats. The prompt should describe the input and output formats.
+
+```python
+data_json = { "resturant employees" :[ 
+    {"name":"Shyam", "email":"shyamjaiswal@gmail.com"},
+    {"name":"Bob", "email":"bob32@gmail.com"},
+    {"name":"Jai", "email":"jai87@gmail.com"}
+]}
+```
+
+```
+Translate the following python dictionary from JSON to an HTML 
+table with column headers and title: {data_json}
+```
+
+**Spellcheck/Grammar check**
+
+```
+Its going to be a long day. Does the car need it’s oil changed
+```
+
+```
+Proofread and correct the following text
+and rewrite the corrected version. If you don't find and errors, just say "No errors found". Don't use any punctuation around the text:
+```{content}```
+```
+
+```
+Got this for my daughter for her birthday cuz she keeps taking 
+mine from my room. Yes, adults also like pandas too. She takes 
+it everywhere with her, and it's super soft and cute. One of the 
+ears is a bit lower than the other, and I don't think that was 
+designed to be asymmetrical. It's a bit small for what I paid for it 
+though. I think there might be other options that are bigger for 
+the same price. It arrived a day earlier than expected, so I got 
+to play with it myself before I gave it to my daughter.
+```
+
+```
+Proofread and correct this review:
+```{content}```
+```
+
+```
+Proofread and correct this review. Make it more compelling. 
+Ensure it follows APA style guide and targets an advanced reader. 
+Output in markdown format.
+Text: ```{content}```
+````
