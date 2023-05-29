@@ -297,7 +297,8 @@ Its going to be a long day. Does the car need it’s oil changed
 
 ```
 Proofread and correct the following text
-and rewrite the corrected version. If you don't find and errors, just say "No errors found". Don't use any punctuation around the text:
+and rewrite the corrected version. If you don't find and errors,
+just say "No errors found". Don't use any punctuation around the text:
 ```{content}```
 ```
 
