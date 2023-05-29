@@ -274,17 +274,19 @@ Translate the following from slang to a business letter:
 
 ChatGPT can translate between formats. The prompt should describe the input and output formats.
 
-```python
-data_json = { "resturant employees" :[ 
-    {"name":"Shyam", "email":"shyamjaiswal@gmail.com"},
-    {"name":"Bob", "email":"bob32@gmail.com"},
-    {"name":"Jai", "email":"jai87@gmail.com"}
-]}
+```json
+{
+  "resturant_employees": [ 
+    { "name": "Shyam", "email": "shyamjaiswal@gmail.com" },
+    { "name": "Bob", "email": "bob32@gmail.com" },
+    { "name": "Jai", "email": "jai87@gmail.com" }
+  ]
+}
 ```
 
 ```
 Translate the following python dictionary from JSON to an HTML 
-table with column headers and title: {data_json}
+table with column headers and title: {content}
 ```
 
 **Spellcheck/Grammar check**
